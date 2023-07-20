@@ -1,0 +1,16 @@
+PODS:
+  - RYTransitioningDelegateSwift (0.1.0)
+
+DEPENDENCIES:
+  - RYTransitioningDelegateSwift (from `../`)
+
+EXTERNAL SOURCES:
+  RYTransitioningDelegateSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RYTransitioningDelegateSwift: 9389f8a8170cfff336b8e7828e111bb28d8f8795
+
+PODFILE CHECKSUM: c408009045b82dfb3c4a6ed0e7293e56c98ce1f2
+
+COCOAPODS: 1.12.1

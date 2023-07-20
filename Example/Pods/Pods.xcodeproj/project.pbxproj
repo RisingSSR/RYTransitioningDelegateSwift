@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20985B84A2F033520156BB687332C4AB /* RYTransitioningDelegateSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55073189A6735A7539774D30F187D083 /* RYTransitioningDelegateSwift-dummy.m */; };
+		465BD73083E7CA020E3158953289719E /* RYTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */; };
+		5CD5947E8645E6C621771E7909A6B41C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5F6BBA334615A538A06B1787686A2F1F /* RYTransitioningDelegateSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 264CC1C9D258FF733834C3140CC5FA52 /* RYTransitioningDelegateSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86492239C3B7D9A5AB3093D6CB4F1EE9 /* Pods-RYTransitioningDelegateSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 292F124C569C70933762CC04D7D99A6C /* Pods-RYTransitioningDelegateSwift_Tests-dummy.m */; };
+		8D51F0863D04C5CADFE48AEAF1AA1473 /* Pods-RYTransitioningDelegateSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908643BB7CB07F0D562C5E0D275DC4A /* Pods-RYTransitioningDelegateSwift_Example-dummy.m */; };
+		BDDC68662224B0EEFEB13B6C2C6F5F54 /* RYDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD96B7E3A013138B20A539B2FADCF38 /* RYDrivenInteractiveTransition.swift */; };
+		C5A39A972928BF94F1660B2761D33A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CBACB4D98F2BEA6B5140AF5E85C5EEB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D5AF30DC52646BE45C50E48E1E790AB9 /* Pods-RYTransitioningDelegateSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7CB99A0FB558EC0BE19584F3C5DAC46 /* Pods-RYTransitioningDelegateSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E95F4C096A9362AE7FA88E5ACE1A6328 /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A21572E2001CE726A5B79C6F5B8AAF /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2C52FF0949FA57BBA2AC31FAADFE813 /* RYAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2527A96B41D5F34E8C9D1554B2F45D6 /* RYAnimatedTransitioning.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BF2BD456DDCF88DAF7B7D86E2BBC7DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 368598C3F790303D2E647BEFF404BEE3;
+			remoteInfo = RYTransitioningDelegateSwift;
+		};
+		A3CA63B9AC542F35CBB2105A3A053D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7870D1186AD9B70BEED207CBA5363FB9;
+			remoteInfo = "Pods-RYTransitioningDelegateSwift_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09CFF8CA7892A6BEDC9ECE42DBC0E61C /* Pods-RYTransitioningDelegateSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RYTransitioningDelegateSwift_Example.modulemap"; sourceTree = "<group>"; };
+		14241D80D7ABF8BC848D553A80DB3011 /* Pods-RYTransitioningDelegateSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Tests-Info.plist"; sourceTree = "<group>"; };
+		264CC1C9D258FF733834C3140CC5FA52 /* RYTransitioningDelegateSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RYTransitioningDelegateSwift-umbrella.h"; sourceTree = "<group>"; };
+		292F124C569C70933762CC04D7D99A6C /* Pods-RYTransitioningDelegateSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RYTransitioningDelegateSwift_Tests-dummy.m"; sourceTree = "<group>"; };
+		2B6DDD39008D37651378B7FCD9493489 /* Pods-RYTransitioningDelegateSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		302C0E6EEC81D243A802864D010F40BC /* RYTransitioningDelegateSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RYTransitioningDelegateSwift-Info.plist"; sourceTree = "<group>"; };
+		33CA8AD7553C049D1820CB80D8FD6640 /* RYTransitioningDelegateSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RYTransitioningDelegateSwift; path = RYTransitioningDelegateSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36AB52F4AE018205DDF0631761329222 /* RYTransitioningDelegateSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RYTransitioningDelegateSwift.debug.xcconfig; sourceTree = "<group>"; };
+		3C5A00C51476334088831A4B642F8962 /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3CD96B7E3A013138B20A539B2FADCF38 /* RYDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RYDrivenInteractiveTransition.swift; path = RYTransitioningDelegateSwift/Classes/RYDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
+		43A21572E2001CE726A5B79C6F5B8AAF /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RYTransitioningDelegateSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		476BD7F76C30FE0C171A59806CC0AABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4908643BB7CB07F0D562C5E0D275DC4A /* Pods-RYTransitioningDelegateSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RYTransitioningDelegateSwift_Example-dummy.m"; sourceTree = "<group>"; };
+		55073189A6735A7539774D30F187D083 /* RYTransitioningDelegateSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RYTransitioningDelegateSwift-dummy.m"; sourceTree = "<group>"; };
+		5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RYTransitioningDelegate.swift; path = RYTransitioningDelegateSwift/Classes/RYTransitioningDelegate.swift; sourceTree = "<group>"; };
+		60FA53672B966C39FBEB27025C290F57 /* Pods-RYTransitioningDelegateSwift_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RYTransitioningDelegateSwift_Tests"; path = Pods_RYTransitioningDelegateSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62EB206D437252997278C63E09555568 /* RYTransitioningDelegateSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RYTransitioningDelegateSwift-prefix.pch"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7417F4D2B50548F91DB482A1AA7D635A /* Pods-RYTransitioningDelegateSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Example-Info.plist"; sourceTree = "<group>"; };
+		85C75DC926E7FFD0AAD2A405B5163B96 /* Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		872EA09BE80549B88E0805E07B0A44DB /* Pods-RYTransitioningDelegateSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		90211EB6223C2734608740641A8C48C9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F29B6C6373E7AE8744FF2F530DEC79D /* Pods-RYTransitioningDelegateSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0387B04982F09F67A7D788F347F1E3A /* Pods-RYTransitioningDelegateSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RYTransitioningDelegateSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C2A07163349FAF1BA3E170FC0B195E8D /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4930CB31427881CB62D081C33EAE418 /* Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C6CBB3CDF728517B44B3C3D2AAEB23CC /* RYTransitioningDelegateSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RYTransitioningDelegateSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D295FC58A0DD8C0D84039FF03AEC7B67 /* RYTransitioningDelegateSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RYTransitioningDelegateSwift.release.xcconfig; sourceTree = "<group>"; };
+		D6B8644DF3AA1E7F32C5F2FCF1C021D4 /* Pods-RYTransitioningDelegateSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RYTransitioningDelegateSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		D8C5F80872A9A909F5DEB4DAA45F99FC /* Pods-RYTransitioningDelegateSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RYTransitioningDelegateSwift_Example"; path = Pods_RYTransitioningDelegateSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F18A6425BEC0F316F1534202231E2C82 /* RYTransitioningDelegateSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RYTransitioningDelegateSwift.modulemap; sourceTree = "<group>"; };
+		F2527A96B41D5F34E8C9D1554B2F45D6 /* RYAnimatedTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RYAnimatedTransitioning.swift; path = RYTransitioningDelegateSwift/Classes/RYAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		F7CB99A0FB558EC0BE19584F3C5DAC46 /* Pods-RYTransitioningDelegateSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RYTransitioningDelegateSwift_Example-umbrella.h"; sourceTree = "<group>"; };
+		FA6A74ED7B7A7A1B84D7FFEDFA3FBD2C /* Pods-RYTransitioningDelegateSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RYTransitioningDelegateSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A63F136B7A2C76AA0DF2809534BE7DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD5947E8645E6C621771E7909A6B41C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7630C23FA38F5EEE5C8D9AB8ECF8EF07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBACB4D98F2BEA6B5140AF5E85C5EEB6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD727F7A7EA6BF3582DA26A674687B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A39A972928BF94F1660B2761D33A13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A08291A84564DA728A6819E0C37D923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5F80872A9A909F5DEB4DAA45F99FC /* Pods-RYTransitioningDelegateSwift_Example */,
+				60FA53672B966C39FBEB27025C290F57 /* Pods-RYTransitioningDelegateSwift_Tests */,
+				33CA8AD7553C049D1820CB80D8FD6640 /* RYTransitioningDelegateSwift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		232855A5ACC56A898A81C55FFF100DAF /* Pods-RYTransitioningDelegateSwift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8644DF3AA1E7F32C5F2FCF1C021D4 /* Pods-RYTransitioningDelegateSwift_Tests.modulemap */,
+				3C5A00C51476334088831A4B642F8962 /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.markdown */,
+				C2A07163349FAF1BA3E170FC0B195E8D /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.plist */,
+				292F124C569C70933762CC04D7D99A6C /* Pods-RYTransitioningDelegateSwift_Tests-dummy.m */,
+				14241D80D7ABF8BC848D553A80DB3011 /* Pods-RYTransitioningDelegateSwift_Tests-Info.plist */,
+				43A21572E2001CE726A5B79C6F5B8AAF /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h */,
+				85C75DC926E7FFD0AAD2A405B5163B96 /* Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig */,
+				C4930CB31427881CB62D081C33EAE418 /* Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig */,
+			);
+			name = "Pods-RYTransitioningDelegateSwift_Tests";
+			path = "Target Support Files/Pods-RYTransitioningDelegateSwift_Tests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5BE1E954CE5842CB61AC2DFEB4209ED6 /* Pods-RYTransitioningDelegateSwift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				09CFF8CA7892A6BEDC9ECE42DBC0E61C /* Pods-RYTransitioningDelegateSwift_Example.modulemap */,
+				FA6A74ED7B7A7A1B84D7FFEDFA3FBD2C /* Pods-RYTransitioningDelegateSwift_Example-acknowledgements.markdown */,
+				9F29B6C6373E7AE8744FF2F530DEC79D /* Pods-RYTransitioningDelegateSwift_Example-acknowledgements.plist */,
+				4908643BB7CB07F0D562C5E0D275DC4A /* Pods-RYTransitioningDelegateSwift_Example-dummy.m */,
+				C0387B04982F09F67A7D788F347F1E3A /* Pods-RYTransitioningDelegateSwift_Example-frameworks.sh */,
+				7417F4D2B50548F91DB482A1AA7D635A /* Pods-RYTransitioningDelegateSwift_Example-Info.plist */,
+				F7CB99A0FB558EC0BE19584F3C5DAC46 /* Pods-RYTransitioningDelegateSwift_Example-umbrella.h */,
+				2B6DDD39008D37651378B7FCD9493489 /* Pods-RYTransitioningDelegateSwift_Example.debug.xcconfig */,
+				872EA09BE80549B88E0805E07B0A44DB /* Pods-RYTransitioningDelegateSwift_Example.release.xcconfig */,
+			);
+			name = "Pods-RYTransitioningDelegateSwift_Example";
+			path = "Target Support Files/Pods-RYTransitioningDelegateSwift_Example";
+			sourceTree = "<group>";
+		};
+		5DD6B4B295B6A91017B4ECBE62E84301 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C29D954FE89767CAA7F8A61C11E8F812 /* RYTransitioningDelegateSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C29D954FE89767CAA7F8A61C11E8F812 /* RYTransitioningDelegateSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F2527A96B41D5F34E8C9D1554B2F45D6 /* RYAnimatedTransitioning.swift */,
+				3CD96B7E3A013138B20A539B2FADCF38 /* RYDrivenInteractiveTransition.swift */,
+				5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */,
+				EB3FBD778292C42649F407F4541F1D29 /* Pod */,
+				C946AF7AB8BA988133EF342C783B1DBD /* Support Files */,
+			);
+			name = RYTransitioningDelegateSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C946AF7AB8BA988133EF342C783B1DBD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F18A6425BEC0F316F1534202231E2C82 /* RYTransitioningDelegateSwift.modulemap */,
+				55073189A6735A7539774D30F187D083 /* RYTransitioningDelegateSwift-dummy.m */,
+				302C0E6EEC81D243A802864D010F40BC /* RYTransitioningDelegateSwift-Info.plist */,
+				62EB206D437252997278C63E09555568 /* RYTransitioningDelegateSwift-prefix.pch */,
+				264CC1C9D258FF733834C3140CC5FA52 /* RYTransitioningDelegateSwift-umbrella.h */,
+				36AB52F4AE018205DDF0631761329222 /* RYTransitioningDelegateSwift.debug.xcconfig */,
+				D295FC58A0DD8C0D84039FF03AEC7B67 /* RYTransitioningDelegateSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RYTransitioningDelegateSwift";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5DD6B4B295B6A91017B4ECBE62E84301 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				0A08291A84564DA728A6819E0C37D923 /* Products */,
+				D79A27AFDAFBE7EE36D97BA15F7DEAF2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D79A27AFDAFBE7EE36D97BA15F7DEAF2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1E954CE5842CB61AC2DFEB4209ED6 /* Pods-RYTransitioningDelegateSwift_Example */,
+				232855A5ACC56A898A81C55FFF100DAF /* Pods-RYTransitioningDelegateSwift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EB3FBD778292C42649F407F4541F1D29 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				90211EB6223C2734608740641A8C48C9 /* LICENSE */,
+				476BD7F76C30FE0C171A59806CC0AABC /* README.md */,
+				C6CBB3CDF728517B44B3C3D2AAEB23CC /* RYTransitioningDelegateSwift.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2444546942890BF86D432AC500476D86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5AF30DC52646BE45C50E48E1E790AB9 /* Pods-RYTransitioningDelegateSwift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E07C33C824FB6C50B6AD8CF3DAC09BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E95F4C096A9362AE7FA88E5ACE1A6328 /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9562EAB376959AA09D2C78A6AD6F1815 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6BBA334615A538A06B1787686A2F1F /* RYTransitioningDelegateSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		368598C3F790303D2E647BEFF404BEE3 /* RYTransitioningDelegateSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B8F0438D8B9AC06748FE05FC70BC1E5 /* Build configuration list for PBXNativeTarget "RYTransitioningDelegateSwift" */;
+			buildPhases = (
+				9562EAB376959AA09D2C78A6AD6F1815 /* Headers */,
+				FC9A47C4D8A69D4E51D9FE7F22033CCF /* Sources */,
+				CD727F7A7EA6BF3582DA26A674687B83 /* Frameworks */,
+				35CBB3CDBFB3BDFC7B353D35F4213C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RYTransitioningDelegateSwift;
+			productName = RYTransitioningDelegateSwift;
+			productReference = 33CA8AD7553C049D1820CB80D8FD6640 /* RYTransitioningDelegateSwift */;
+			productType = "com.apple.product-type.framework";
+		};
+		7870D1186AD9B70BEED207CBA5363FB9 /* Pods-RYTransitioningDelegateSwift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46F1D2ACF05DC919DEB9DB751617143 /* Build configuration list for PBXNativeTarget "Pods-RYTransitioningDelegateSwift_Example" */;
+			buildPhases = (
+				2444546942890BF86D432AC500476D86 /* Headers */,
+				9214181FB5DC8090A6AEC6E7924C20BD /* Sources */,
+				2A63F136B7A2C76AA0DF2809534BE7DD /* Frameworks */,
+				FDE428E0F9F547BE62673DAAFEE0597A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0706CC70B8B1BE2504B2125AC0A4FD99 /* PBXTargetDependency */,
+			);
+			name = "Pods-RYTransitioningDelegateSwift_Example";
+			productName = Pods_RYTransitioningDelegateSwift_Example;
+			productReference = D8C5F80872A9A909F5DEB4DAA45F99FC /* Pods-RYTransitioningDelegateSwift_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA317D732BE9F91C8EEF913FBAD2B689 /* Pods-RYTransitioningDelegateSwift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB674E8C1A3D6DD052D0821BDAEBD047 /* Build configuration list for PBXNativeTarget "Pods-RYTransitioningDelegateSwift_Tests" */;
+			buildPhases = (
+				5E07C33C824FB6C50B6AD8CF3DAC09BC /* Headers */,
+				ECD238060F38A92C65646CA451E40DDB /* Sources */,
+				7630C23FA38F5EEE5C8D9AB8ECF8EF07 /* Frameworks */,
+				74B0BB76C89675FEEC185EFFE74ABDBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D24B57F629787CBC1541012B8323C85 /* PBXTargetDependency */,
+			);
+			name = "Pods-RYTransitioningDelegateSwift_Tests";
+			productName = Pods_RYTransitioningDelegateSwift_Tests;
+			productReference = 60FA53672B966C39FBEB27025C290F57 /* Pods-RYTransitioningDelegateSwift_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0A08291A84564DA728A6819E0C37D923 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7870D1186AD9B70BEED207CBA5363FB9 /* Pods-RYTransitioningDelegateSwift_Example */,
+				CA317D732BE9F91C8EEF913FBAD2B689 /* Pods-RYTransitioningDelegateSwift_Tests */,
+				368598C3F790303D2E647BEFF404BEE3 /* RYTransitioningDelegateSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35CBB3CDBFB3BDFC7B353D35F4213C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74B0BB76C89675FEEC185EFFE74ABDBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDE428E0F9F547BE62673DAAFEE0597A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9214181FB5DC8090A6AEC6E7924C20BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D51F0863D04C5CADFE48AEAF1AA1473 /* Pods-RYTransitioningDelegateSwift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD238060F38A92C65646CA451E40DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86492239C3B7D9A5AB3093D6CB4F1EE9 /* Pods-RYTransitioningDelegateSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC9A47C4D8A69D4E51D9FE7F22033CCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C52FF0949FA57BBA2AC31FAADFE813 /* RYAnimatedTransitioning.swift in Sources */,
+				BDDC68662224B0EEFEB13B6C2C6F5F54 /* RYDrivenInteractiveTransition.swift in Sources */,
+				465BD73083E7CA020E3158953289719E /* RYTransitioningDelegate.swift in Sources */,
+				20985B84A2F033520156BB687332C4AB /* RYTransitioningDelegateSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0706CC70B8B1BE2504B2125AC0A4FD99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RYTransitioningDelegateSwift;
+			target = 368598C3F790303D2E647BEFF404BEE3 /* RYTransitioningDelegateSwift */;
+			targetProxy = 5BF2BD456DDCF88DAF7B7D86E2BBC7DE /* PBXContainerItemProxy */;
+		};
+		7D24B57F629787CBC1541012B8323C85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RYTransitioningDelegateSwift_Example";
+			target = 7870D1186AD9B70BEED207CBA5363FB9 /* Pods-RYTransitioningDelegateSwift_Example */;
+			targetProxy = A3CA63B9AC542F35CBB2105A3A053D30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8FF36922C19DB22D5061CD73EA136408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C75DC926E7FFD0AAD2A405B5163B96 /* Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Tests/Pods-RYTransitioningDelegateSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Tests/Pods-RYTransitioningDelegateSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E5968C3EA8FFD2095720EFF22DE1407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D295FC58A0DD8C0D84039FF03AEC7B67 /* RYTransitioningDelegateSwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift.modulemap";
+				PRODUCT_MODULE_NAME = RYTransitioningDelegateSwift;
+				PRODUCT_NAME = RYTransitioningDelegateSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C997B6E2887F9D07C706F0BACFA5DE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6DDD39008D37651378B7FCD9493489 /* Pods-RYTransitioningDelegateSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Example/Pods-RYTransitioningDelegateSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Example/Pods-RYTransitioningDelegateSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EB8A75B2BC930B37222C3129F24C6202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36AB52F4AE018205DDF0631761329222 /* RYTransitioningDelegateSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RYTransitioningDelegateSwift/RYTransitioningDelegateSwift.modulemap";
+				PRODUCT_MODULE_NAME = RYTransitioningDelegateSwift;
+				PRODUCT_NAME = RYTransitioningDelegateSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED21396121B9809E4CB356581126C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 872EA09BE80549B88E0805E07B0A44DB /* Pods-RYTransitioningDelegateSwift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Example/Pods-RYTransitioningDelegateSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Example/Pods-RYTransitioningDelegateSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F65D93DFAA96B9985BBCB8542730F635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4930CB31427881CB62D081C33EAE418 /* Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Tests/Pods-RYTransitioningDelegateSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RYTransitioningDelegateSwift_Tests/Pods-RYTransitioningDelegateSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B8F0438D8B9AC06748FE05FC70BC1E5 /* Build configuration list for PBXNativeTarget "RYTransitioningDelegateSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB8A75B2BC930B37222C3129F24C6202 /* Debug */,
+				9E5968C3EA8FFD2095720EFF22DE1407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46F1D2ACF05DC919DEB9DB751617143 /* Build configuration list for PBXNativeTarget "Pods-RYTransitioningDelegateSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C997B6E2887F9D07C706F0BACFA5DE13 /* Debug */,
+				ED21396121B9809E4CB356581126C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB674E8C1A3D6DD052D0821BDAEBD047 /* Build configuration list for PBXNativeTarget "Pods-RYTransitioningDelegateSwift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF36922C19DB22D5061CD73EA136408 /* Debug */,
+				F65D93DFAA96B9985BBCB8542730F635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

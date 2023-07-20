@@ -1,0 +1,6 @@
+framework module RYTransitioningDelegateSwift {
+  umbrella header "RYTransitioningDelegateSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
