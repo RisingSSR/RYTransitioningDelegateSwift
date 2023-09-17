@@ -8,38 +8,9 @@
 
 import UIKit
 
-// MARK: RYTransitioningAnimationDelegate
-
-@objc public protocol RYTransitioningAnimationDelegate {
-    
-    // Presented
-    
-    @objc optional
-    func prepare(_ transitioningDelegate: RYTransitioningDelegate,
-                 withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning,
-                 forPresented context: UIViewControllerContextTransitioning) -> Void
-    
-    @objc optional
-    func finished(_ transitioningDelegate: RYTransitioningDelegate,
-                  withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning,
-                  forPresented context: UIViewControllerContextTransitioning) -> Void
-    
-    // Dismissed
-    
-    @objc optional
-    func prepare(_ transitioningDelegate: RYTransitioningDelegate,
-                 withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning,
-                 forDismissed context: UIViewControllerContextTransitioning) -> Void
-    
-    @objc optional
-    func finished(_ transitioningDelegate: RYTransitioningDelegate,
-                  withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning,
-                  forDismissed context: UIViewControllerContextTransitioning) -> Void
-}
-
 // MARK: RYTransitioningDelegate
 
-open class RYTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
+open class RYTransitioningDelegate: NSObject {
     
     public var transitionDurationIfNeeded: TimeInterval = 0.3
     
@@ -49,7 +20,16 @@ open class RYTransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
     
     public var panInsetsIfNeeded: UIEdgeInsets = .zero
     
-    public weak var delegate: RYTransitioningAnimationDelegate?
+    // if you want sets more inside property, sets those property
+    
+    public var present: ((RYPresentAnimatedTransitioning) -> ())? = nil
+    
+    public var dismiss: ((RYDismissAnimatedTransitioning) -> ())? = nil
+}
+
+// MARK: UIViewControllerTransitioningDelegate
+
+extension RYTransitioningDelegate: UIViewControllerTransitioningDelegate {
     
     // Animation Supported
     
@@ -57,14 +37,14 @@ open class RYTransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
         let transition = RYPresentAnimatedTransitioning()
         transition.transitionDuration = transitionDurationIfNeeded
         transition.supportedTapOutsideBack = supportedTapOutsideBackWhenPresent
-        transition.delegate = self
+        present?(transition)
         return transition
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let transition = RYDismissAnimatedTransitioning()
         transition.transitionDuration = transitionDurationIfNeeded
-        transition.delegate = self
+        dismiss?(transition)
         return transition
     }
     
@@ -82,34 +62,5 @@ open class RYTransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
         let transition = RYDismissDrivenInteractiveTransition(panGesture: panGestureIfNeeded)
         transition.panInsets = panInsetsIfNeeded
         return transition
-    }
-}
-
-// MARK: AnimatedTransitioningDelegate
-
-extension RYTransitioningDelegate: AnimatedTransitioningDelegate {
-        
-    public func prepare(_ animatedTransitioning: RYAnimatedTransitioning, for context: UIViewControllerContextTransitioning) {
-        if let delegate {
-            if animatedTransitioning.classForCoder is RYPresentAnimatedTransitioning.Type {
-                delegate.prepare?(self, withAnimatedTransitioning: animatedTransitioning, forPresented: context)
-            } else if animatedTransitioning.classForCoder is RYDismissAnimatedTransitioning.Type {
-                delegate.prepare?(self, withAnimatedTransitioning: animatedTransitioning, forDismissed: context)
-            }
-        } else {
-            animatedTransitioning.prepare(context: context)
-        }
-    }
-    
-    public func finished(_ animatedTransitioning: RYAnimatedTransitioning, for context: UIViewControllerContextTransitioning) {
-        if let delegate {
-            if animatedTransitioning.classForCoder is RYPresentAnimatedTransitioning.Type {
-                delegate.finished?(self, withAnimatedTransitioning: animatedTransitioning, forPresented: context)
-            } else if animatedTransitioning.classForCoder is RYDismissAnimatedTransitioning.Type {
-                delegate.finished?(self, withAnimatedTransitioning: animatedTransitioning, forDismissed: context)
-            }
-        } else {
-            animatedTransitioning.finished(context: context)
-        }
     }
 }

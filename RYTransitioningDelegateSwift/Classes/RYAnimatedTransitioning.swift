@@ -14,32 +14,74 @@ fileprivate extension UIViewController {
     }
 }
 
-// MARK: AnimatedTransitioningDelegate
-
-@objc public protocol AnimatedTransitioningDelegate {
-    @objc optional func prepare(_ animatedTransitioning: RYAnimatedTransitioning,
-                                for context: UIViewControllerContextTransitioning) -> Void
-    
-    @objc optional func finished(_ animatedTransitioning: RYAnimatedTransitioning,
-                                for context: UIViewControllerContextTransitioning) -> Void
-}
-
 // MARK: RYAnimatedTransitioning
 
-open class RYAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
+open class RYAnimatedTransitioning: NSObject {
     
+    public typealias AnimationActionBlock = ((UIViewControllerContextTransitioning) -> ())
+    
+    // - Set those property
+    
+    /* set the duration of UIView.animate */
     public var transitionDuration: TimeInterval = 0.3
     
-    public  var delegate: AnimatedTransitioningDelegate?
+    /* set the height for presented */
+    public var heightForPresented: CGFloat? = nil
     
-    open func prepare(animate context: UIViewControllerContextTransitioning) {}
-    open func prepare(context: UIViewControllerContextTransitioning) {}
+    /* will be called before UIView.animate */
+    public var prepareAnimationAction: AnimationActionBlock? = nil
     
-    open func finished(animate context: UIViewControllerContextTransitioning) {}
-    open func finished(context: UIViewControllerContextTransitioning) {}
+    /* will be called in animations in UIView.animate */
+    public var finishAnimationAction: AnimationActionBlock? = nil
     
+    /* will be called in completion in UIView.animate */
+    public var completionAnimationAction: AnimationActionBlock? = nil
+        
+    // - Rewrite those method
+    
+    /* This function will be dropped before UIView.animate */
+    open func prepare(animate context: UIViewControllerContextTransitioning) {
+        if let beforeAction = prepareAnimationAction {
+            beforeAction(context)
+        } else {
+            prepareWithBase(context: context)
+        }
+    }
+    
+    /* This function will be called in animations in UIView.animate */
+    open func finished(animate context: UIViewControllerContextTransitioning) {
+        if let finishAction = finishAnimationAction {
+            finishAction(context)
+        } else {
+            finishedWithBase(context: context)
+        }
+    }
+    
+    /* This function will be called in completion in UIView.animate */
     open func completion(_ context: UIViewControllerContextTransitioning) {
+        if let completionAction = completionAnimationAction {
+            completionAction(context)
+        } else {
+            completionWithBase(context: context)
+        }
         context.completeTransition(!context.transitionWasCancelled)
+    }
+    
+    // - Base animation prepare, Rewrite those method
+    
+    open func prepareWithBase(context: UIViewControllerContextTransitioning) { }
+    
+    open func finishedWithBase(context: UIViewControllerContextTransitioning) { }
+    
+    open func completionWithBase(context: UIViewControllerContextTransitioning) { }
+}
+
+// MARK: UIViewControllerAnimatedTransitioning
+
+extension RYAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
+    
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        transitionDuration
     }
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -50,17 +92,15 @@ open class RYAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransition
             self.completion(transitionContext)
         }
     }
-    
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        transitionDuration
-    }
 }
 
 // MARK: RYPresentAnimatedTransitioning
 
 open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
-    
+            
     public var supportedTapOutsideBack: Bool = true
+    
+    // - prepare
     
     open override func prepare(animate context: UIViewControllerContextTransitioning) {
         let from = context.viewController(forKey: .from)
@@ -69,26 +109,28 @@ open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
         if let toView = to?.view {
             context.containerView.addSubview(toView)
         }
-        delegate?.prepare?(self, for: context)
+        
+        super.prepare(animate: context)
     }
     
-    open override func prepare(context: UIViewControllerContextTransitioning) {
+    open override func prepareWithBase(context: UIViewControllerContextTransitioning) {
         let to = context.viewController(forKey: .to)
-        var beginFrame = to?.view.frame ?? .zero
-        beginFrame.origin.y = context.containerView.frame.maxY
-        to?.view.frame = beginFrame
+        to?.view.frame.origin.y = context.containerView.frame.maxY
     }
+    
+    // - finished
     
     open override func finished(animate context: UIViewControllerContextTransitioning) {
-        delegate?.finished?(self, for: context)
+        super.finished(animate: context)
     }
     
-    open override func finished(context: UIViewControllerContextTransitioning) {
+    open override func finishedWithBase(context: UIViewControllerContextTransitioning) {
         let to = context.viewController(forKey: .to)
-        var endFrame = to?.view.frame ?? .zero
-        endFrame.origin.y = context.containerView.frame.size.height - endFrame.size.height
-        to?.view.frame = endFrame
+        var endHeight = heightForPresented ?? to?.view.frame.height ?? .zero
+        to?.view.frame.origin.y = context.containerView.frame.maxY - endHeight
     }
+    
+    // - completion
     
     open override func completion(_ context: UIViewControllerContextTransitioning) {
         let to = context.viewController(forKey: .to)
@@ -102,11 +144,15 @@ open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
         }
         super.completion(context)
     }
+    
+    open override func completionWithBase(context: UIViewControllerContextTransitioning) { }
 }
 
 // MARK: RYDismissAnimatedTransitioning
 
 open class RYDismissAnimatedTransitioning: RYAnimatedTransitioning {
+    
+    // - prepare
     
     open override func prepare(animate context: UIViewControllerContextTransitioning) {
         let from = context.viewController(forKey: .from)
@@ -114,21 +160,24 @@ open class RYDismissAnimatedTransitioning: RYAnimatedTransitioning {
         
         from?.beginAppearanceTransition(false, animated: true)
         to?.beginAppearanceTransition(true, animated: true)
-        delegate?.prepare?(self, for: context)
+        
+        super.prepare(animate: context)
     }
+    
+    open override func prepareWithBase(context: UIViewControllerContextTransitioning) { }
+    
+    // - finished
     
     open override func finished(animate context: UIViewControllerContextTransitioning) {
-        delegate?.finished?(self, for: context)
+        super.finished(animate: context)
     }
     
-    open override func finished(context: UIViewControllerContextTransitioning) {
+    open override func finishedWithBase(context: UIViewControllerContextTransitioning) {
         let from = context.viewController(forKey: .from)
-        
-        var endFrame = from?.view.frame ?? .zero
-        endFrame.origin.y = context.containerView.frame.origin.y + context.containerView.frame.size.height
-        
-        from?.view.frame = endFrame
+        from?.view.frame.origin.y = context.containerView.frame.maxY
     }
+    
+    // - completion
     
     open override func completion(_ context: UIViewControllerContextTransitioning) {
         let from = context.viewController(forKey: .from)
@@ -137,4 +186,6 @@ open class RYDismissAnimatedTransitioning: RYAnimatedTransitioning {
         }
         super.completion(context)
     }
+    
+    open override func completionWithBase(context: UIViewControllerContextTransitioning) { }
 }

@@ -15,14 +15,16 @@ open class RYDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
     public var panInsets: UIEdgeInsets = .zero
     
     public var contextSafeBottom: CGFloat {
-        context.containerView.frame.size.height - panInsets.bottom
+        guard let context = context else { return 0 }
+        return context.containerView.frame.size.height - panInsets.bottom
     }
     
     public var contextSafeRight: CGFloat {
-        context.containerView.frame.size.width - panInsets.right
+        guard let context = context else { return 0 }
+        return context.containerView.frame.size.width - panInsets.right
     }
     
-    private var context: UIViewControllerContextTransitioning!
+    private var context: UIViewControllerContextTransitioning?
     
     public init(panGesture: UIPanGestureRecognizer) {
         super.init()
@@ -43,6 +45,7 @@ open class RYDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
     }
     
     @objc private func update(pan: UIPanGestureRecognizer) {
+        guard let context = context else { return }
         let percent = percent(pan: pan, context: context)
         switch pan.state {
         case .began: break
@@ -58,7 +61,6 @@ open class RYDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
             cancel()
         }
     }
-
 }
 
 // MARK: RYPresentDrivenInteractiveTransition

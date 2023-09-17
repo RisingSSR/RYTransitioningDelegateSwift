@@ -50,7 +50,7 @@
 		3C5A00C51476334088831A4B642F8962 /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3CD96B7E3A013138B20A539B2FADCF38 /* RYDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RYDrivenInteractiveTransition.swift; path = RYTransitioningDelegateSwift/Classes/RYDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
 		43A21572E2001CE726A5B79C6F5B8AAF /* Pods-RYTransitioningDelegateSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RYTransitioningDelegateSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		476BD7F76C30FE0C171A59806CC0AABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		476BD7F76C30FE0C171A59806CC0AABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4908643BB7CB07F0D562C5E0D275DC4A /* Pods-RYTransitioningDelegateSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RYTransitioningDelegateSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		55073189A6735A7539774D30F187D083 /* RYTransitioningDelegateSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RYTransitioningDelegateSwift-dummy.m"; sourceTree = "<group>"; };
 		5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RYTransitioningDelegate.swift; path = RYTransitioningDelegateSwift/Classes/RYTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -60,13 +60,13 @@
 		7417F4D2B50548F91DB482A1AA7D635A /* Pods-RYTransitioningDelegateSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		85C75DC926E7FFD0AAD2A405B5163B96 /* Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		872EA09BE80549B88E0805E07B0A44DB /* Pods-RYTransitioningDelegateSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		90211EB6223C2734608740641A8C48C9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		90211EB6223C2734608740641A8C48C9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F29B6C6373E7AE8744FF2F530DEC79D /* Pods-RYTransitioningDelegateSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C0387B04982F09F67A7D788F347F1E3A /* Pods-RYTransitioningDelegateSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RYTransitioningDelegateSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C2A07163349FAF1BA3E170FC0B195E8D /* Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RYTransitioningDelegateSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4930CB31427881CB62D081C33EAE418 /* Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RYTransitioningDelegateSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C6CBB3CDF728517B44B3C3D2AAEB23CC /* RYTransitioningDelegateSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RYTransitioningDelegateSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C6CBB3CDF728517B44B3C3D2AAEB23CC /* RYTransitioningDelegateSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RYTransitioningDelegateSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D295FC58A0DD8C0D84039FF03AEC7B67 /* RYTransitioningDelegateSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RYTransitioningDelegateSwift.release.xcconfig; sourceTree = "<group>"; };
 		D6B8644DF3AA1E7F32C5F2FCF1C021D4 /* Pods-RYTransitioningDelegateSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RYTransitioningDelegateSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		D8C5F80872A9A909F5DEB4DAA45F99FC /* Pods-RYTransitioningDelegateSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RYTransitioningDelegateSwift_Example"; path = Pods_RYTransitioningDelegateSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,9 +166,9 @@
 		C29D954FE89767CAA7F8A61C11E8F812 /* RYTransitioningDelegateSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */,
 				F2527A96B41D5F34E8C9D1554B2F45D6 /* RYAnimatedTransitioning.swift */,
 				3CD96B7E3A013138B20A539B2FADCF38 /* RYDrivenInteractiveTransition.swift */,
-				5EEA2DFC7F17A7F14E5491C0800E4507 /* RYTransitioningDelegate.swift */,
 				EB3FBD778292C42649F407F4541F1D29 /* Pod */,
 				C946AF7AB8BA988133EF342C783B1DBD /* Support Files */,
 			);
@@ -469,8 +469,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

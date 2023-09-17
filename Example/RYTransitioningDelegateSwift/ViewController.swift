@@ -84,30 +84,48 @@ extension ViewController {
     }
     
     func presentCustomizeHeight() {
+        let heightForPresented: CGFloat = 560
+        
         let transitioningDelegate = RYTransitioningDelegate()
         transitioningDelegate.supportedTapOutsideBackWhenPresent = false
+        transitioningDelegate.present = { transition in
+            transition.heightForPresented = heightForPresented
+        }
         
         let vc = FullViewController()
         vc.transitioningDelegate = transitioningDelegate
         vc.modalPresentationStyle = .custom
         
-        vc.view.frame.size.height = 560
-        vc.title = "customize height: \(vc.view.frame.size.height)"
+        vc.title = "customize height: \(heightForPresented)"
         vc.delegate = self
         
         self.present(vc, animated: true)
     }
     
     func presentCustomizeWithBackBtn() {
+        let height: CGFloat = 420
+        
         let transitioningDelegate = RYTransitioningDelegate()
         transitioningDelegate.supportedTapOutsideBackWhenPresent = false
-        transitioningDelegate.delegate = self
+        transitioningDelegate.present = { transition in
+            transition.heightForPresented = height
+            transition.prepareAnimationAction = { context in
+                transition.prepareWithBase(context: context)
+                self.containerViewBackBtn.alpha = 0
+                context.containerView.addSubview(self.containerViewBackBtn)
+            }
+            transition.finishAnimationAction = { context in
+                transition.finishedWithBase(context: context)
+                context.containerView.backgroundColor = .black.withAlphaComponent(0.5)
+                self.containerViewBackBtn.alpha = 1
+            }
+        }
         
         let vc = FullViewController()
         vc.transitioningDelegate = transitioningDelegate
         vc.modalPresentationStyle = .custom
         
-        vc.view.frame.size.height = 420
+        vc.view.frame.size.height = height
         vc.title = "customize height: \(vc.view.frame.size.height) with back Btn"
         vc.delegate = self
         
@@ -120,50 +138,14 @@ extension ViewController: FullViewControllerDelegate {
         if let selectedRow = tableView.indexPathForSelectedRow?.row {
             if selectedRow == 2 {
                 let transitioningDelegate = RYTransitioningDelegate()
-                transitioningDelegate.delegate = self
                 viewController.transitioningDelegate = transitioningDelegate
+                viewController.dismiss(animated: true)
+            } else {
                 viewController.dismiss(animated: true)
             }
         } else {
             viewController.dismiss(animated: true)
         }
-    }
-}
-
-extension ViewController: RYTransitioningAnimationDelegate {
-    
-    func prepare(_ transitioningDelegate: RYTransitioningDelegate, withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning, forPresented context: UIViewControllerContextTransitioning) {
-        
-        animatedTransitioning.prepare(context: context)
-        
-        let containerView = context.containerView
-        containerViewBackBtn.frame = CGRect(x: 20, y: 100, width: 40, height: 80)
-        containerViewBackBtn.alpha = 0
-        containerView.addSubview(containerViewBackBtn)
-    }
-    
-    func finished(_ transitioningDelegate: RYTransitioningDelegate, withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning, forPresented context: UIViewControllerContextTransitioning) {
-        
-        animatedTransitioning.finished(context: context)
-        
-        let containerView = context.containerView
-        containerView.backgroundColor = .gray.withAlphaComponent(0.5)
-        containerViewBackBtn.alpha = 1
-    }
-    
-    func prepare(_ transitioningDelegate: RYTransitioningDelegate, withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning, forDismissed context: UIViewControllerContextTransitioning) {
-        
-        animatedTransitioning.prepare(context: context)
-    }
-    
-    func finished(_ transitioningDelegate: RYTransitioningDelegate, withAnimatedTransitioning animatedTransitioning: RYAnimatedTransitioning, forDismissed context: UIViewControllerContextTransitioning) {
-        
-        animatedTransitioning.finished(context: context)
-        
-        let containerView = context.containerView
-        containerView.backgroundColor = .clear
-        containerViewBackBtn.alpha = 0
-        containerViewBackBtn.frame = CGRect(x: 20, y: 100, width: 40, height: 80)
     }
 }
 
