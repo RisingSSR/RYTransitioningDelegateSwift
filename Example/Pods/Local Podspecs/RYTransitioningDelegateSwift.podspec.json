@@ -1,6 +1,6 @@
 {
   "name": "RYTransitioningDelegateSwift",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A viewController transition animation",
   "homepage": "https://github.com/RisingSSR/RYTransitioningDelegateSwift",
   "license": {
@@ -12,12 +12,12 @@
   },
   "source": {
     "git": "https://github.com/RisingSSR/RYTransitioningDelegateSwift.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "swift_versions": "5.0",
+  "swift_versions": "4.8",
   "source_files": "RYTransitioningDelegateSwift/Classes/**/*",
-  "swift_version": "5.0"
+  "swift_version": "4.8"
 }

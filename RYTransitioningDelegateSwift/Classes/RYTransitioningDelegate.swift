@@ -20,6 +20,8 @@ open class RYTransitioningDelegate: NSObject {
     
     public var panInsetsIfNeeded: UIEdgeInsets = .zero
     
+    public var heightForPresented: CGFloat? = nil
+    
     // if you want sets more inside property, sets those property
     
     public var present: ((RYPresentAnimatedTransitioning) -> ())? = nil
@@ -37,6 +39,7 @@ extension RYTransitioningDelegate: UIViewControllerTransitioningDelegate {
         let transition = RYPresentAnimatedTransitioning()
         transition.transitionDuration = transitionDurationIfNeeded
         transition.supportedTapOutsideBack = supportedTapOutsideBackWhenPresent
+        transition.heightForPresented = heightForPresented
         present?(transition)
         return transition
     }
@@ -51,14 +54,14 @@ extension RYTransitioningDelegate: UIViewControllerTransitioningDelegate {
     // Interactive Supported
     
     public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        guard let panGestureIfNeeded else { return nil }
+        guard let panGestureIfNeeded = panGestureIfNeeded else { return nil }
         let transition = RYPresentDrivenInteractiveTransition(panGesture: panGestureIfNeeded)
         transition.panInsets = panInsetsIfNeeded
         return transition
     }
     
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        guard let panGestureIfNeeded else { return nil }
+        guard let panGestureIfNeeded = panGestureIfNeeded else { return nil }
         let transition = RYDismissDrivenInteractiveTransition(panGesture: panGestureIfNeeded)
         transition.panInsets = panInsetsIfNeeded
         return transition

@@ -1,5 +1,5 @@
 PODS:
-  - RYTransitioningDelegateSwift (0.1.0)
+  - RYTransitioningDelegateSwift (0.2.0)
 
 DEPENDENCIES:
   - RYTransitioningDelegateSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RYTransitioningDelegateSwift: 9389f8a8170cfff336b8e7828e111bb28d8f8795
+  RYTransitioningDelegateSwift: 26159522d0bec616d49d9f829b66a7fbe205d772
 
 PODFILE CHECKSUM: c408009045b82dfb3c4a6ed0e7293e56c98ce1f2
 

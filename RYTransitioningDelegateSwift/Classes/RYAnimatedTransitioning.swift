@@ -137,7 +137,7 @@ open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
         if context.transitionWasCancelled {
             to?.view.removeFromSuperview()
         } else {
-            if self.supportedTapOutsideBack, let to {
+            if self.supportedTapOutsideBack, let to = to {
                 let tap = UITapGestureRecognizer(target: to, action: #selector(UIViewController.ry_dismissAnimated))
                 context.containerView.addGestureRecognizer(tap)
             }

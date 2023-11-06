@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RYTransitioningDelegateSwift'
-  s.version          = '0.2.0'
+  s.version          = '0.2.2'
   s.summary          = 'A viewController transition animation'
 
   s.homepage         = 'https://github.com/RisingSSR/RYTransitioningDelegateSwift'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   
   if s.respond_to? 'swift_version'
-    s.swift_version = "5.0"
+    s.swift_version = '4.8'
   end
 
   s.source_files = 'RYTransitioningDelegateSwift/Classes/**/*'
