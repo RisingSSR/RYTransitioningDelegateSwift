@@ -105,7 +105,6 @@ open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
     open override func prepare(animate context: UIViewControllerContextTransitioning) {
         let from = context.viewController(forKey: .from)
         let to = context.viewController(forKey: .to)
-        from?.beginAppearanceTransition(false, animated: true)
         if let toView = to?.view {
             context.containerView.addSubview(toView)
         }
@@ -126,7 +125,7 @@ open class RYPresentAnimatedTransitioning: RYAnimatedTransitioning {
     
     open override func finishedWithBase(context: UIViewControllerContextTransitioning) {
         let to = context.viewController(forKey: .to)
-        var endHeight = heightForPresented ?? to?.view.frame.height ?? .zero
+        let endHeight = heightForPresented ?? to?.view.frame.height ?? .zero
         to?.view.frame.origin.y = context.containerView.frame.maxY - endHeight
     }
     
@@ -155,12 +154,6 @@ open class RYDismissAnimatedTransitioning: RYAnimatedTransitioning {
     // - prepare
     
     open override func prepare(animate context: UIViewControllerContextTransitioning) {
-        let from = context.viewController(forKey: .from)
-        let to = context.viewController(forKey: .to)
-        
-        from?.beginAppearanceTransition(false, animated: true)
-        to?.beginAppearanceTransition(true, animated: true)
-        
         super.prepare(animate: context)
     }
     
